@@ -1,0 +1,10 @@
+INFO:     Started server process [2700]
+INFO:     Waiting for application startup.
+2026-10-26 21:34:16,473 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-10-26 21:34:16,475 WARNING app.llm: LLM call failed: provider returned HTTP 401: {"error":{"message":"User not found.","code":401}}
+2026-10-26 21:34:16,476 WARNING app.main: LLM unavailable, using the deterministic analyst: provider returned HTTP 401: {"error":{"message":"User not found.","code":401}}
+2026-10-26 21:34:16,477 INFO    app.main: SupportPilot AI 1.0.0 ready · AI mode: fallback · model: nvidia/nemotron-3-super-120b-a12b:free
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-10-26 21:35:24,216 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-10-26 21:35:24,218 WARNING app.llm: LLM call failed: provider returned HTTP 401: {"error":{"message":"User not found.","code":401}}

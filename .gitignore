@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+backend/data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Node
+node_modules/
+frontend/dist/
+npm-debug.log*
+.vite/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# QA artifacts
+e2e-output/

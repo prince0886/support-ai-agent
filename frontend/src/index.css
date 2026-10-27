@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-canvas text-ink antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    @apply bg-brand-100 text-brand-900;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  :focus-visible {
+    outline: none;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-slate-200/80 bg-white shadow-card;
+  }
+
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-lg text-sm font-medium transition focus-visible:ring-2 focus-visible:ring-brand-500/40 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 px-3.5 py-2 text-white shadow-sm hover:bg-brand-700;
+  }
+
+  .btn-secondary {
+    @apply border border-slate-200 bg-white px-3.5 py-2 text-slate-700 hover:border-slate-300 hover:bg-slate-50;
+  }
+
+  .btn-ghost {
+    @apply px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900;
+  }
+
+  .btn-danger {
+    @apply border border-rose-200 bg-white px-3.5 py-2 text-rose-700 hover:bg-rose-50;
+  }
+
+  .btn-sm {
+    @apply px-2.5 py-1.5 text-xs;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm transition placeholder:text-slate-400 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-medium text-slate-600;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[11px] font-medium ring-1 ring-inset;
+  }
+
+  .section-title {
+    @apply text-[13px] font-semibold uppercase tracking-wider text-slate-500;
+  }
+
+  .link {
+    @apply text-brand-600 underline-offset-2 hover:underline;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-md bg-slate-200/70;
+  }
+}
